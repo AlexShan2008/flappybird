@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name='viewport' content='width=device-width'>
+  <title>Canvas-flappybird</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <audio id='music_die'>
+    <source src="music/sfx_die.mp3" type="audio/mp3">
+    <source src="music/sfx_die.ogg" type="audio/ogg">
+    <source src="music/sfx_die.wav" type="audio/wav">
+  </audio>
+  <audio id='music_hit'>
+    <source src="music/sfx_hit.mp3" type="audio/mp3">
+    <source src="music/sfx_hit.ogg" type="audio/ogg">
+    <source src="music/sfx_hit.wav" type="audio/wav">
+  </audio>
+  <audio id='music_wing'>
+    <source src="music/sfx_wing.mp3" type="audio/mp3">
+    <source src="music/sfx_wing.ogg" type="audio/ogg">
+    <source src="music/sfx_wing.wav" type="audio/wav">
+  </audio>
+  <audio id='music_swooshing'>
+    <source src="music/sfx_swooshing.mp3" type="audio/mp3">
+    <source src="music/sfx_swooshing.ogg" type="audio/ogg">
+    <source src="music/sfx_swooshing.wav" type="audio/wav">
+  </audio>
+  <audio id='music_point'>
+    <source src="music/sfx_point.mp3" type="audio/mp3">
+    <source src="music/sfx_point.ogg" type="audio/ogg">
+    <source src="music/sfx_point.wav" type="audio/wav">
+  </audio>
+
+  <canvas id="canvas">
+    Your brower does not support HTML5 Canvas!
+  </canvas>
+  <a class="js-go-home go-home" href="/" target="_blank">
+    <img src="images/home.png" alt="Go Home">
+    <h3>Home</h3>
+  </a>
+
+  <script src="./js/SceneManager.js"></script>
+  <script src="./js/Background.js"></script>
+  <script src="./js/Bird.js"></script>
+  <script src="./js/Land.js"></script>
+  <script src="./js/Pipe.js"></script>
+  <script src="./js/Game.js"></script>
+
+  <script>
+    let canvas = document.getElementById('canvas');
+    let game = new Game(canvas);
+  </script>
+</body>
+
+</html>
